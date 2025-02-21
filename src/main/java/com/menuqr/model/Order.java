@@ -14,6 +14,14 @@ public class Order {
     private String paymentMethod;
     private String status; // Pending, Served
 
+    //ADDED LATER 
+    private String transactionId; // Stores online payment reference (if any)
+
+// Getter & Setter
+public String getTransactionId() { return transactionId; }
+public void setTransactionId(String transactionId) { this.transactionId = transactionId; }
+
+    //TILL HERE
     @ElementCollection
     private List<String> items;
 
