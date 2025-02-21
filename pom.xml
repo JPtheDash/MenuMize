@@ -30,10 +30,11 @@
 
         <!-- MySQL Driver (Change to PostgreSQL if needed) -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <scope>runtime</scope>
+</dependency>
+
 
         <!-- Spring Boot DevTools (For easier local development) -->
         <dependency>
