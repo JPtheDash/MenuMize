@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -8,45 +8,52 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>menuqr</name>
-    <description>Menu QR Web App Backend</description>
+    <name>MenuMize Backend</name>
+    <description>Backend for MenuMize - QR-based Menu Ordering</description>
 
-    <properties>
-        <java.version>17</java.version>
-    </properties>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.2</version>  <!-- Use the latest stable Spring Boot version -->
+        <relativePath/> <!-- Lookup parent from repository -->
+    </parent>
 
     <dependencies>
-        <!-- Spring Boot Starter Web (REST APIs) -->
+        <!-- Spring Boot Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.2.2</version>
         </dependency>
 
-        <!-- Spring Boot Starter JPA (Database) -->
+        <!-- Spring Boot JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>3.2.2</version>
         </dependency>
 
-        <!-- MySQL Driver (Change to PostgreSQL if needed) -->
+        <!-- PostgreSQL Driver -->
         <dependency>
-    <groupId>org.postgresql</groupId>
-    <artifactId>postgresql</artifactId>
-    <scope>runtime</scope>
-</dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.1</version>  <!-- Use latest PostgreSQL driver -->
+        </dependency>
 
-
-        <!-- Spring Boot DevTools (For easier local development) -->
+        <!-- Spring Boot DevTools (for local development) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
+            <version>3.2.2</version>
+            <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
 
-        <!-- Spring Boot Starter Test (For writing tests) -->
+        <!-- Spring Boot Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.2.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -56,6 +63,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.2.2</version>
             </plugin>
         </plugins>
     </build>
